@@ -8,9 +8,18 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    disableHostCheck: true,
+    cors: false
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  define: {
+    global: {}
   }
 })
