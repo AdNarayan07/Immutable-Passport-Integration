@@ -236,9 +236,9 @@ You can get ID and Access token for the logged in user using following method:
     const accessToken = await passportInstance.getAccessToken();
     const idToken = await passportInstance.getIdToken();
 ```
-However, these tokens are in form of `JWTs(JSON Web Tokens)` and we need to validate them.
+However, these tokens are in form of `JWTs(JSON Web Tokens)` which are not human readable. We need to validate them in order to make them readable. We can use a js module like `jose to validate, or alternatively, we can use [online JWT debugger](https://jwt.io/#debugger-io) for the same.
 
-Here is the function through which you can validate those JWTs and return the token payload, remember we imported `'jose'` module when setting up our project:
+Here is the function through which you can validate those JWTs and return the token payload using `jose`:
 ```js
 async function validateJWT(jwt){
   const JWKS = jose.createRemoteJWKSet(new URL('https://auth.immutable.com/.well-known/jwks.json'))
