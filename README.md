@@ -1,6 +1,7 @@
 # Immutable passport Integration 
 
 This guide helps get you started developing an app to integrate immutable passport with Vue 3 in Vite and @imtbl/sdk.
+> Prerequisites: Node.js, NPM and Git installed.
 
 [My Immutable Passport Integration App](https://immutable-passport-sample.adityanarayan13.repl.co/)
 
@@ -135,7 +136,7 @@ Now that we are finished setting up our project, we now need to Register our app
 
 1. Go to https://hub.immutable.com/
 2. Click "Login Using Password", a popup should open.
-3. Login (or Create Passport if you haven't already) using your preffered method.
+3. Login (or Create Passport if you haven't already) using your preferred method.
 4. Click on "Add Project", Enter your project name, choose "Immutable zkEVM" in rollup and click "Create". The project should be created.
 5. In "Create Environment" dialog enter the name for your environment, select Testnet and click "Create".
 6. Inside your environment, in passport tab, create a passport client:
